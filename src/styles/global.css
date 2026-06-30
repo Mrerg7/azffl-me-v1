@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .heading-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-x-3 px-9 py-4 bg-[#9F5A3C] hover:bg-[#864C31] text-white font-semibold text-lg rounded-3xl transition-all active:scale-[0.985] shadow-lg shadow-[#9F5A3C]/20;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-[#D4C9B8] hover:bg-white text-[#3F342E] font-semibold text-lg rounded-3xl transition-all;
+  }
+
+  .section {
+    @apply py-16 md:py-20 px-6;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-[#1F1A17] tracking-tight;
+  }
+
+  .modern-pill {
+    @apply inline-block bg-[#9F5A3C]/10 text-[#9F5A3C] font-semibold text-xs px-3 py-1 rounded-full tracking-wide;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 4rem 0;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4C9B8, transparent);
+  }
+
+  .elegant-symbol {
+    color: #9F5A3C;
+    font-size: 1.1rem;
+    opacity: 0.6;
+  }
+
+  .meditation-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .meditation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+  }
+
+  .taxonomy-item {
+    position: relative;
+    padding-left: 1.75rem;
+  }
+
+  .taxonomy-item::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #9F5A3C;
+    opacity: 0.5;
+  }
+}

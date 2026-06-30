@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://azffl.me/sitemap-index.xml
